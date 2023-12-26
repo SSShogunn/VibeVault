@@ -33,7 +33,6 @@ cd VibeVault
 ```
 2. Install dependencies:
 ```bash
-Copy code
 npm install
 ```
 3. Set up environment variables:
