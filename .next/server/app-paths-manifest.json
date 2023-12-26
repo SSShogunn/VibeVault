@@ -1,0 +1,9 @@
+{
+  "/api/create-checkout-session/route": "app/api/create-checkout-session/route.js",
+  "/api/webhooks/route": "app/api/webhooks/route.js",
+  "/api/create-portal-link/route": "app/api/create-portal-link/route.js",
+  "/account/page": "app/account/page.js",
+  "/(site)/page": "app/(site)/page.js",
+  "/liked/page": "app/liked/page.js",
+  "/search/page": "app/search/page.js"
+}

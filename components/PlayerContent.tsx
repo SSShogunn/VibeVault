@@ -76,10 +76,10 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
         return () => {
             sound?.unload();
         }
-    },[sound])
+    }, [sound])
 
     const handlePlay = () => {
-        if(!isPlaying) {
+        if (!isPlaying) {
             play();
         } else {
             pause();
@@ -104,20 +104,22 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
             </div>
 
             <div className="flex md:hidden col-auto w-full justify-center items-center">
+                <AiFillStepBackward onClick={onPlayPrevious} size={30} className="text-neutral-400 cursor-pointer hover:text-white transition m-3" />
                 <div onClick={handlePlay} className="h-10 w-10 flex items-center justify-center rounded-full bg-white p-1 cursor-pointer">
                     <Icon size={30} className="text-black" />
                 </div>
+                <AiFillStepForward onClick={onPlayNext} size={30} className="text-neutral-400 cursor-pointer hover:text-white transition m-3" />
             </div>
 
             <div className="hidden h-full md:flex justify-center items-center w-full max-w-[722px] gap-x-6">
 
-                <AiFillStepBackward onClick={onPlayPrevious } size={30} className="text-neutral-400 cursor-pointer hover:text-white transition" />
+                <AiFillStepBackward onClick={onPlayPrevious} size={30} className="text-neutral-400 cursor-pointer hover:text-white transition" />
 
-                <div onClick={handlePlay } className="flex items-center justify-center h-10 w-10 rounded-full bg-white p-1 cursor-pointer">
+                <div onClick={handlePlay} className="flex items-center justify-center h-10 w-10 rounded-full bg-white p-1 cursor-pointer">
                     <Icon size={30} className="text-black" />
                 </div>
 
-                <AiFillStepForward onClick={ onPlayNext } size={30} className="text-neutral-400 cursor-pointer hover:text-white transition" />
+                <AiFillStepForward onClick={onPlayNext} size={30} className="text-neutral-400 cursor-pointer hover:text-white transition" />
 
             </div>
 
@@ -125,7 +127,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
                 <div className="flex items-center gap-x-2 w-[120px]">
                     <VolumeIcon onClick={() => { toggleMute() }} className="cursor-pointer" size={34} />
                     <Slider value={volume}
-                    onChange={(value) => setVolume(value)}/>
+                        onChange={(value) => setVolume(value)} />
                 </div>
             </div>
         </div>

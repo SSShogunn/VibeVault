@@ -2,12 +2,18 @@
 
 import AuthModal from "@/components/AuthModel"
 import Modal from "@/components/Modal"
+import SubscribeModal from "@/components/SubscribeModal"
 import UploadModal from "@/components/UploadModal"
+import { ProductWithPrice } from "@/types"
 
 import React, { use, useState, useEffect } from "react"
 
+interface ModalProviderProps {
+    products: ProductWithPrice[]
+}
 
-const ModalProivder = () => {
+
+const ModalProivder: React.FC<ModalProviderProps> = ({products}) => {
     const [isMounted, setIsMounted] = useState(false)
 
     useEffect(() => {
@@ -20,6 +26,7 @@ const ModalProivder = () => {
         <>
            <AuthModal/>
            <UploadModal/>
+           <SubscribeModal products={products}/>
         </>
     )
 }

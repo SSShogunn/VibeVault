@@ -1,3 +1,5 @@
+"use client";
+
 import React, { use, useState } from 'react'
 
 import Modal from './Modal'
@@ -136,4 +138,4 @@ const UploadModal = () => {
     )
 }
 
-export default UploadModal
+export default UploadModal;
