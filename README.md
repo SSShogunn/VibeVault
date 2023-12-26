@@ -30,3 +30,34 @@ Before running the app, make sure you have the following installed:
 ```bash
 git clone https://github.com/your-username/VibeVault.git
 cd VibeVault
+```
+Install dependencies:
+```bash
+Copy code
+npm install
+# or
+yarn install
+```
+Set up environment variables:
+Create a .env.local file in the root directory and add the following variables:
+```env
+Copy code
+NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+STRIPE_PUBLIC_KEY=your-stripe-public-key
+NEXT_PUBLIC_API_URL=your-api-url
+NEXT_PUBLIC_SERVER_API_KEY=your-server-api-key
+```
+Replace the placeholders with your actual Supabase, Stripe, and server API information.
+
+
+Running the App
+Once you've completed the installation steps, you can run the app using the following command:
+
+```bash
+Copy code
+npm run dev
+# or
+yarn dev
+```
+Visit http://localhost:3000 in your web browser to access the VibeVault app.
